@@ -91,10 +91,6 @@ class __TwigTemplate_c6022efae1ccb3b54e7fd22de1ddd547603323fcc0b1cf633f4904ebd8e
         echo twig_include($this->env, $context, "user/_form.html.twig");
         echo "
 
-    <a href=\"";
-        // line 9
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_index");
-        echo "\">Retour à l'index</a>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -116,7 +112,7 @@ class __TwigTemplate_c6022efae1ccb3b54e7fd22de1ddd547603323fcc0b1cf633f4904ebd8e
 
     public function getDebugInfo()
     {
-        return array (  96 => 9,  91 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  91 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -129,7 +125,6 @@ class __TwigTemplate_c6022efae1ccb3b54e7fd22de1ddd547603323fcc0b1cf633f4904ebd8e
 
     {{ include('user/_form.html.twig') }}
 
-    <a href=\"{{ path('app_user_index') }}\">Retour à l'index</a>
 {% endblock %}
 ", "user/new.html.twig", "C:\\wamp64\\www\\ClubDesAMIS\\templates\\user\\new.html.twig");
     }

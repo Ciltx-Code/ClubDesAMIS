@@ -85,22 +85,13 @@ class __TwigTemplate_dbcf5d71ab55c83733a29994cf809c102b6e2eb343436f9c24d2b2feef0
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    <h1>Edit User</h1>
-
+        echo "
     ";
-        // line 8
-        echo twig_include($this->env, $context, "user/_form.html.twig", ["button_label" => "Update"]);
+        // line 7
+        echo twig_include($this->env, $context, "user/_form.html.twig", ["button_label" => "Enregistrer"]);
         echo "
 
-    <a href=\"";
-        // line 10
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_index");
-        echo "\">back to list</a>
 
-    ";
-        // line 12
-        echo twig_include($this->env, $context, "user/_delete_form.html.twig");
-        echo "
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -122,7 +113,7 @@ class __TwigTemplate_dbcf5d71ab55c83733a29994cf809c102b6e2eb343436f9c24d2b2feef0
 
     public function getDebugInfo()
     {
-        return array (  102 => 12,  97 => 10,  92 => 8,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  91 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -132,13 +123,10 @@ class __TwigTemplate_dbcf5d71ab55c83733a29994cf809c102b6e2eb343436f9c24d2b2feef0
 {% block title %}Edit User{% endblock %}
 
 {% block body %}
-    <h1>Edit User</h1>
 
-    {{ include('user/_form.html.twig', {'button_label': 'Update'}) }}
+    {{ include('user/_form.html.twig', {'button_label': 'Enregistrer'}) }}
 
-    <a href=\"{{ path('app_user_index') }}\">back to list</a>
 
-    {{ include('user/_delete_form.html.twig') }}
 {% endblock %}
 ", "user/edit.html.twig", "C:\\wamp64\\www\\ClubDesAMIS\\templates\\user\\edit.html.twig");
     }

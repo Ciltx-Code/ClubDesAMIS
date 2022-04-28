@@ -57,25 +57,25 @@ class __TwigTemplate_ce924b1f6aebe41885dfc605a5691715860efc7099ac5fc1d0ce813fd36
         }
     }
 </script>
-<div class=\"addForm\">
+<div class=\"addForm d-flex justify-content-center alignt\" style=\"text-align: center\">
     <form name=\"UserForm\">
-        <div id=\"UserForm\" class=\"mt-3\">
+        <div id=\"UserForm\" class=\"mt-3 \">
             ";
         // line 20
         if ((0 === twig_compare((isset($context["action"]) || array_key_exists("action", $context) ? $context["action"] : (function () { throw new RuntimeError('Variable "action" does not exist.', 20, $this->source); })()), "ajout"))) {
             // line 21
-            echo "                <h3>Ajout d'un utilisateur</h3>
+            echo "                <h3 style=\"color: white\">Ajout d'un utilisateur</h3>
             ";
         } else {
             // line 23
-            echo "                <h3>Modification d'un utilisateur</h3>
+            echo "                <h3 style=\"color: white\">Modification d'un utilisateur</h3>
             ";
         }
         // line 25
         echo "            <div>
                 <label class=\"required field field_v2 mt-3\">
                     <span class=\"field__label-wrap\">
-                        <span class=\"field__label\">Email</span>
+                        <span class=\"field__label\" style=\"color: white\">Email</span>
                     </span>
                     ";
         // line 30
@@ -86,7 +86,7 @@ class __TwigTemplate_ce924b1f6aebe41885dfc605a5691715860efc7099ac5fc1d0ce813fd36
             <div>
                 <label class=\"field field_v2 mt-3\" >
                     <span class=\"field__label-wrap\">
-                        <span class=\"field__label\">Mot de passe</span>
+                        <span class=\"field__label\" style=\"color: white\">Mot de passe</span>
                     </span>
                     ";
         // line 38
@@ -97,7 +97,7 @@ class __TwigTemplate_ce924b1f6aebe41885dfc605a5691715860efc7099ac5fc1d0ce813fd36
             <div>
                 <label class=\"required field field_v2 mt-3\" >
                     <span class=\"field__label-wrap\">
-                        <span class=\"field__label\">Nom</span>
+                        <span class=\"field__label\" style=\"color: white\">Nom</span>
                     </span>
                     ";
         // line 46
@@ -109,7 +109,7 @@ class __TwigTemplate_ce924b1f6aebe41885dfc605a5691715860efc7099ac5fc1d0ce813fd36
             <div>
                 <label class=\"required field field_v2 mt-3\">
                     <span class=\"field__label-wrap\">
-                        <span class=\"field__label\">Prénom</span>
+                        <span class=\"field__label\" style=\"color: white\">Prénom</span>
                     </span>
                     ";
         // line 55
@@ -121,7 +121,7 @@ class __TwigTemplate_ce924b1f6aebe41885dfc605a5691715860efc7099ac5fc1d0ce813fd36
             <div>
                 <label class=\"required field field_v2 mt-3\" >
                     <span class=\"field__label-wrap\">
-                        <span class=\"field__label\">Téléphone fixe</span>
+                        <span class=\"field__label\" style=\"color: white\">Téléphone fixe</span>
                     </span>
                     ";
         // line 64
@@ -133,7 +133,7 @@ class __TwigTemplate_ce924b1f6aebe41885dfc605a5691715860efc7099ac5fc1d0ce813fd36
             <div>
                 <label class=\"required field field_v2 mt-3\" >
                     <span class=\"field__label-wrap\">
-                        <span class=\"field__label\">Téléphone portable</span>
+                        <span class=\"field__label\" style=\"color: white\">Téléphone portable</span>
                     </span>
                     ";
         // line 73
@@ -145,7 +145,7 @@ class __TwigTemplate_ce924b1f6aebe41885dfc605a5691715860efc7099ac5fc1d0ce813fd36
             <div>
                 <label class=\"required field field_v2 mt-3\">
                     <span class=\"field__label-wrap\">
-                        <span class=\"field__label\">Num Adresse</span>
+                        <span class=\"field__label\" style=\"color: white\">Num Adresse</span>
                     </span>
                     ";
         // line 82
@@ -157,7 +157,7 @@ class __TwigTemplate_ce924b1f6aebe41885dfc605a5691715860efc7099ac5fc1d0ce813fd36
             <div>
                 <label class=\"required field field_v2 mt-3\">
                     <span class=\"field__label-wrap\">
-                        <span class=\"field__label\">Num Adresse</span>
+                        <span class=\"field__label\" style=\"color: white\">Num Adresse</span>
                     </span>
                     ";
         // line 91
@@ -167,7 +167,7 @@ class __TwigTemplate_ce924b1f6aebe41885dfc605a5691715860efc7099ac5fc1d0ce813fd36
                 </label>
             </div>
             <div class=\"mt-3\">
-                <label>
+                <label style=\"color: white\">
                     Rôles :
                     <select>
                             <option value=\"user\">Utilisateur</option>
@@ -175,22 +175,62 @@ class __TwigTemplate_ce924b1f6aebe41885dfc605a5691715860efc7099ac5fc1d0ce813fd36
                     </select>
                 </label>
             </div>
-        </div>
-        ";
-        // line 105
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 105, $this->source); })()), "_token", [], "any", false, false, false, 105), 'row');
+            <br/>
+
+            ";
+        // line 106
+        if ((0 === twig_compare((isset($context["action"]) || array_key_exists("action", $context) ? $context["action"] : (function () { throw new RuntimeError('Variable "action" does not exist.', 106, $this->source); })()), "ajout"))) {
+            // line 107
+            echo "                <div class=\"d-flex justify-content-center\">
+                    <button style=\"margin-right:20px\" type=\"button\" class=\"btn btn-outline-warning\"
+                            onclick=\"location.href='";
+            // line 109
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_index");
+            echo "'\">Retour a la liste
+                    </button>
+                    <button class=\"btn mx-3 btn-outline-success\">";
+            // line 111
+            echo twig_escape_filter($this->env, ((array_key_exists("button_label", $context)) ? (_twig_default_filter((isset($context["button_label"]) || array_key_exists("button_label", $context) ? $context["button_label"] : (function () { throw new RuntimeError('Variable "button_label" does not exist.', 111, $this->source); })()), "Enregistrer")) : ("Enregistrer")), "html", null, true);
+            echo "</button>
+                </div>
+            ";
+        } else {
+            // line 114
+            echo "                <div class=\"d-flex justify-content-center\">
+                    <button style=\"margin-right:20px\" type=\"button\" class=\"btn btn-outline-warning\"
+                            onclick=\"location.href='";
+            // line 116
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_index");
+            echo "'\">Retour a la liste
+                    </button>
+                    <button class=\"btn mx-3 btn-outline-success\">";
+            // line 118
+            echo twig_escape_filter($this->env, ((array_key_exists("button_label", $context)) ? (_twig_default_filter((isset($context["button_label"]) || array_key_exists("button_label", $context) ? $context["button_label"] : (function () { throw new RuntimeError('Variable "button_label" does not exist.', 118, $this->source); })()), "Enregistrer")) : ("Enregistrer")), "html", null, true);
+            echo "</button>
+                    ";
+            // line 119
+            echo twig_include($this->env, $context, "user/_delete_form.html.twig");
+            echo "
+                </div>
+            ";
+        }
+        // line 122
         echo "
-        <div class=\"mb-3 mx-3 mt-3\">
-            <button class=\"btn mx-3 btn-outline-dark\">";
-        // line 107
-        echo twig_escape_filter($this->env, ((array_key_exists("button_label", $context)) ? (_twig_default_filter((isset($context["button_label"]) || array_key_exists("button_label", $context) ? $context["button_label"] : (function () { throw new RuntimeError('Variable "button_label" does not exist.', 107, $this->source); })()), "Enregistrer")) : ("Enregistrer")), "html", null, true);
-        echo "</button>
+
+
         </div>
+
+        ";
+        // line 127
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 127, $this->source); })()), "_token", [], "any", false, false, false, 127), 'row');
+        echo "
+
+
     </form>
 </div>
 ";
-        // line 111
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 111, $this->source); })()), 'form_end');
+        // line 132
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 132, $this->source); })()), 'form_end');
         echo "
 ";
         
@@ -213,7 +253,7 @@ class __TwigTemplate_ce924b1f6aebe41885dfc605a5691715860efc7099ac5fc1d0ce813fd36
 
     public function getDebugInfo()
     {
-        return array (  193 => 111,  186 => 107,  181 => 105,  164 => 91,  152 => 82,  140 => 73,  128 => 64,  116 => 55,  104 => 46,  93 => 38,  82 => 30,  75 => 25,  71 => 23,  67 => 21,  65 => 20,  43 => 1,);
+        return array (  233 => 132,  225 => 127,  218 => 122,  212 => 119,  208 => 118,  203 => 116,  199 => 114,  193 => 111,  188 => 109,  184 => 107,  182 => 106,  164 => 91,  152 => 82,  140 => 73,  128 => 64,  116 => 55,  104 => 46,  93 => 38,  82 => 30,  75 => 25,  71 => 23,  67 => 21,  65 => 20,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -234,18 +274,18 @@ class __TwigTemplate_ce924b1f6aebe41885dfc605a5691715860efc7099ac5fc1d0ce813fd36
         }
     }
 </script>
-<div class=\"addForm\">
+<div class=\"addForm d-flex justify-content-center alignt\" style=\"text-align: center\">
     <form name=\"UserForm\">
-        <div id=\"UserForm\" class=\"mt-3\">
+        <div id=\"UserForm\" class=\"mt-3 \">
             {% if action == \"ajout\" %}
-                <h3>Ajout d'un utilisateur</h3>
+                <h3 style=\"color: white\">Ajout d'un utilisateur</h3>
             {% else %}
-                <h3>Modification d'un utilisateur</h3>
+                <h3 style=\"color: white\">Modification d'un utilisateur</h3>
             {% endif %}
             <div>
                 <label class=\"required field field_v2 mt-3\">
                     <span class=\"field__label-wrap\">
-                        <span class=\"field__label\">Email</span>
+                        <span class=\"field__label\" style=\"color: white\">Email</span>
                     </span>
                     {{ form_widget(form.email, {'attr': {'class': 'field__input', 'autocomplete' : 'off'} } ) }}
                 </label>
@@ -253,7 +293,7 @@ class __TwigTemplate_ce924b1f6aebe41885dfc605a5691715860efc7099ac5fc1d0ce813fd36
             <div>
                 <label class=\"field field_v2 mt-3\" >
                     <span class=\"field__label-wrap\">
-                        <span class=\"field__label\">Mot de passe</span>
+                        <span class=\"field__label\" style=\"color: white\">Mot de passe</span>
                     </span>
                     {{ form_widget(form.password, {'attr': { 'type' : 'password' , 'name' : 'userPassword', 'id' : 'userPassword' , 'class': 'field__input','autocomplete' : 'off', 'onfocusin' : 'removePlaceholderPassword()', 'onfocusout' : 'resetPlaceholderPassword()',  'value' : '*********'   } } ) }}
                 </label>
@@ -261,7 +301,7 @@ class __TwigTemplate_ce924b1f6aebe41885dfc605a5691715860efc7099ac5fc1d0ce813fd36
             <div>
                 <label class=\"required field field_v2 mt-3\" >
                     <span class=\"field__label-wrap\">
-                        <span class=\"field__label\">Nom</span>
+                        <span class=\"field__label\" style=\"color: white\">Nom</span>
                     </span>
                     {{ form_widget(form.nom, {'attr': {'class': 'field__input', 'autocomplete' : 'off'} } ) }}
 
@@ -270,7 +310,7 @@ class __TwigTemplate_ce924b1f6aebe41885dfc605a5691715860efc7099ac5fc1d0ce813fd36
             <div>
                 <label class=\"required field field_v2 mt-3\">
                     <span class=\"field__label-wrap\">
-                        <span class=\"field__label\">Prénom</span>
+                        <span class=\"field__label\" style=\"color: white\">Prénom</span>
                     </span>
                     {{ form_widget(form.prenom, {'attr': {'class': 'field__input', 'autocomplete' : 'off'} } ) }}
 
@@ -279,7 +319,7 @@ class __TwigTemplate_ce924b1f6aebe41885dfc605a5691715860efc7099ac5fc1d0ce813fd36
             <div>
                 <label class=\"required field field_v2 mt-3\" >
                     <span class=\"field__label-wrap\">
-                        <span class=\"field__label\">Téléphone fixe</span>
+                        <span class=\"field__label\" style=\"color: white\">Téléphone fixe</span>
                     </span>
                     {{ form_widget(form.telFixe, {'attr': {'class': 'field__input',  'maxlength' : '10', 'minlength' : '10','autocomplete' : 'off'} } ) }}
 
@@ -288,7 +328,7 @@ class __TwigTemplate_ce924b1f6aebe41885dfc605a5691715860efc7099ac5fc1d0ce813fd36
             <div>
                 <label class=\"required field field_v2 mt-3\" >
                     <span class=\"field__label-wrap\">
-                        <span class=\"field__label\">Téléphone portable</span>
+                        <span class=\"field__label\" style=\"color: white\">Téléphone portable</span>
                     </span>
                     {{ form_widget(form.telPortable, {'attr': {'class': 'field__input',  'maxlength' : '10', 'minlength' : '10','autocomplete' : 'off'} } ) }}
 
@@ -297,7 +337,7 @@ class __TwigTemplate_ce924b1f6aebe41885dfc605a5691715860efc7099ac5fc1d0ce813fd36
             <div>
                 <label class=\"required field field_v2 mt-3\">
                     <span class=\"field__label-wrap\">
-                        <span class=\"field__label\">Num Adresse</span>
+                        <span class=\"field__label\" style=\"color: white\">Num Adresse</span>
                     </span>
                     {{ form_widget(form.numAdresse, {'attr': {'class': 'field__input','autocomplete' : 'off'} } ) }}
 
@@ -306,14 +346,14 @@ class __TwigTemplate_ce924b1f6aebe41885dfc605a5691715860efc7099ac5fc1d0ce813fd36
             <div>
                 <label class=\"required field field_v2 mt-3\">
                     <span class=\"field__label-wrap\">
-                        <span class=\"field__label\">Num Adresse</span>
+                        <span class=\"field__label\" style=\"color: white\">Num Adresse</span>
                     </span>
                     {{ form_widget(form.villeAdresse, {'attr': {'class': 'field__input','autocomplete' : 'off'} } ) }}
 
                 </label>
             </div>
             <div class=\"mt-3\">
-                <label>
+                <label style=\"color: white\">
                     Rôles :
                     <select>
                             <option value=\"user\">Utilisateur</option>
@@ -321,11 +361,32 @@ class __TwigTemplate_ce924b1f6aebe41885dfc605a5691715860efc7099ac5fc1d0ce813fd36
                     </select>
                 </label>
             </div>
+            <br/>
+
+            {% if action == \"ajout\" %}
+                <div class=\"d-flex justify-content-center\">
+                    <button style=\"margin-right:20px\" type=\"button\" class=\"btn btn-outline-warning\"
+                            onclick=\"location.href='{{ path('app_user_index')}}'\">Retour a la liste
+                    </button>
+                    <button class=\"btn mx-3 btn-outline-success\">{{ button_label|default('Enregistrer') }}</button>
+                </div>
+            {% else %}
+                <div class=\"d-flex justify-content-center\">
+                    <button style=\"margin-right:20px\" type=\"button\" class=\"btn btn-outline-warning\"
+                            onclick=\"location.href='{{ path('app_user_index')}}'\">Retour a la liste
+                    </button>
+                    <button class=\"btn mx-3 btn-outline-success\">{{ button_label|default('Enregistrer') }}</button>
+                    {{ include('user/_delete_form.html.twig') }}
+                </div>
+            {% endif %}
+
+
+
         </div>
+
         {{ form_row(form._token) }}
-        <div class=\"mb-3 mx-3 mt-3\">
-            <button class=\"btn mx-3 btn-outline-dark\">{{ button_label|default('Enregistrer') }}</button>
-        </div>
+
+
     </form>
 </div>
 {{ form_end(form) }}
