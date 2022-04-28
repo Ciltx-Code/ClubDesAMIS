@@ -73,6 +73,8 @@ class UserController extends AbstractController
         return $this->renderForm('user/edit.html.twig', [
             'user' => $user,
             'form' => $form,
+            'action'=>"modification",
+
         ]);
     }
 
