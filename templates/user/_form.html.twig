@@ -96,15 +96,29 @@
 
                 </label>
             </div>
-            <div class="mt-3">
-                <label style="color: white">
-                    Rôles :
-                    <select>
-                            <option value="user">Utilisateur</option>
-                            <option value="admin">Administrateur</option>
-                    </select>
-                </label>
-            </div>
+            {% if action == "ajout" %}
+                <div class="mt-3">
+                    <label>
+                        Administrateur :
+                        <input type="checkbox" name="isAdmin">
+                    </label>
+                </div>
+            {%else%}
+                <div class="mt-3">
+                    <label>
+                        Rôles :
+                        <select>
+                            {% if user.getStringRoles == "Utilisateur" %}
+                                <option value="user" selected>Utilisateur</option>
+                                <option value="admin">Administrateur</option>
+                            {% else %}
+                                <option value="user">Utilisateur</option>
+                                <option value="admin" selected>Administrateur</option>
+                            {% endif %}
+                        </select>
+                    </label>
+                </div>
+            {%endif%}
             <br/>
 
             {% if action == "ajout" %}

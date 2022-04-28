@@ -1,5 +1,4 @@
 {% extends 'base.html.twig' %}
-{% block title %}Expulsions Locatives{% endblock %}
 {% block body %}
     <script>
         function resetError(){
@@ -7,12 +6,6 @@
         }
     </script>
     <div class="container">
-        <div style="display: flex; justify-content: center;margin-bottom: -50px">
-            <img src="{{ asset('images/Griffe PN.png') }}" style="width: 15%;"  alt="">
-        </div>
-        <h1 style="color: white;font-size: 40px; font-weight: lighter;text-align: center; ">
-            Gestion des expulsions locatives
-        </h1>
         <div class="bg-primary p-4" style="text-align: center; width: 50%; margin: 5% auto; border-radius: 25px; border: 2px solid white">
             <form method="post" action="{{ path('login') }}">
                 <h1 class="h3 mb-3 font-weight-normal" style="color: white">Veuillez vous connecter</h1>
