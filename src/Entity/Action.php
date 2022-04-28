@@ -35,10 +35,10 @@ class Action
     private $amis_id;
 
     /**
-     * @ORM\ManyToOne(targetEntity=commission::class, inversedBy="actions")
+     * @ORM\ManyToOne(targetEntity=Commission::class, inversedBy="actions")
      * @ORM\JoinColumn(nullable=false)
      */
-    private $commission_id;
+    private $Commission_id;
 
     /**
      * @ORM\ManyToMany(targetEntity=Inscrit::class, mappedBy="action_id")
@@ -104,14 +104,14 @@ class Action
         return $this;
     }
 
-    public function getCommissionId(): ?commission
+    public function getCommissionId(): ?Commission
     {
-        return $this->commission_id;
+        return $this->Commission_id;
     }
 
-    public function setCommissionId(?commission $commission_id): self
+    public function setCommissionId(?Commission $Commission_id): self
     {
-        $this->commission_id = $commission_id;
+        $this->Commission_id = $Commission_id;
 
         return $this;
     }

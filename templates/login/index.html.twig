@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+{% block title %}Expulsions Locatives{% endblock %}
+{% block body %}
+    <script>
+        function resetError(){
+            document.getElementById('error').style.display="none";
+        }
+    </script>
+    <div class="container">
+        <div style="display: flex; justify-content: center;margin-bottom: -50px">
+            <img src="{{ asset('images/Griffe PN.png') }}" style="width: 15%;"  alt="">
+        </div>
+        <h1 style="color: white;font-size: 40px; font-weight: lighter;text-align: center; ">
+            Gestion des expulsions locatives
+        </h1>
+        <div class="bg-primary p-4" style="text-align: center; width: 50%; margin: 5% auto; border-radius: 25px; border: 2px solid white">
+            <form method="post" action="{{ path('login') }}">
+                <h1 class="h3 mb-3 font-weight-normal" style="color: white">Veuillez vous connecter</h1>
+                <div style="display: block; color: white; width: 100%">
+                    <div style="margin: auto">
+                        <label for="util" class="field field_v2 mt-3">
+                            <span class="field__label-wrap">
+                                    <span class="field__label">Nom d'utilisateur</span>
+                                </span>
+                            <input type="text" class="field__input" id="util" name="_username" autocomplete="off">
+
+                        </label>
+                    </div>
+
+                    <div style="width: 450px; margin: auto" >
+                        <label for="mdp" class="field field_v2 mt-3">
+                            <span class="field__label-wrap">
+                                    <span class="field__label">Mot de passe</span>
+                            </span>
+                            <input type="password" class="field__input" id="mdp" name="_password" autocomplete="off">
+                        </label>
+                    </div>
+                    {% if error %}
+                        <div class="mt-4" id="error" style="color: red;width: 40%; height: 20%; margin: auto  ">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                    {% endif %}
+                    <input type="hidden" name="{{ path('index') }}" value="/">
+                    <button class="btn btn-outline-light mt-5" type="submit">
+                        Se connecter
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

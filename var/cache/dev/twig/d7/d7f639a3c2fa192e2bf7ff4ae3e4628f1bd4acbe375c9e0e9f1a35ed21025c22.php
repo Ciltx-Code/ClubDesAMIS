@@ -277,6 +277,6 @@ class __TwigTemplate_9f95631c1d665b3680ed4e35cadd7fc337db335e18376f9d268b00e9f3e
     {% set attr = attr|merge({class: (attr.class|default('') ~ ' button')|trim}) %}
     {{- parent() -}}
 {%- endblock button_widget %}
-", "foundation_6_layout.html.twig", "E:\\BTSSIO A2\\project\\vendor\\symfony\\twig-bridge\\Resources\\views\\Form\\foundation_6_layout.html.twig");
+", "foundation_6_layout.html.twig", "C:\\wamp64\\www\\ClubDesAMIS\\vendor\\symfony\\twig-bridge\\Resources\\views\\Form\\foundation_6_layout.html.twig");
     }
 }

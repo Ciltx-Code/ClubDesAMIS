@@ -93,11 +93,12 @@ class __TwigTemplate_08e1ab0b780c1118aa31bc00c7c2f8f355bb21ebb68e1eb75f8656fd698
         $this->displayBlock('javascripts', $context, $blocks);
         // line 23
         echo "    </head>
-    <body>
+
+    <body style=\"max-width:100%;\" class=\"bg-dark\">
         ";
-        // line 25
-        $this->displayBlock('body', $context, $blocks);
         // line 26
+        $this->displayBlock('body', $context, $blocks);
+        // line 27
         echo "    </body>
 </html>
 ";
@@ -174,7 +175,7 @@ class __TwigTemplate_08e1ab0b780c1118aa31bc00c7c2f8f355bb21ebb68e1eb75f8656fd698
 
     }
 
-    // line 25
+    // line 26
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -204,7 +205,7 @@ class __TwigTemplate_08e1ab0b780c1118aa31bc00c7c2f8f355bb21ebb68e1eb75f8656fd698
 
     public function getDebugInfo()
     {
-        return array (  178 => 25,  165 => 21,  155 => 20,  142 => 17,  132 => 16,  113 => 5,  101 => 26,  99 => 25,  95 => 23,  93 => 20,  90 => 19,  88 => 16,  83 => 14,  79 => 13,  75 => 12,  71 => 11,  67 => 10,  63 => 9,  58 => 8,  53 => 5,  47 => 1,);
+        return array (  179 => 26,  166 => 21,  156 => 20,  143 => 17,  133 => 16,  114 => 5,  102 => 27,  100 => 26,  95 => 23,  93 => 20,  90 => 19,  88 => 16,  83 => 14,  79 => 13,  75 => 12,  71 => 11,  67 => 10,  63 => 9,  58 => 8,  53 => 5,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -232,10 +233,11 @@ class __TwigTemplate_08e1ab0b780c1118aa31bc00c7c2f8f355bb21ebb68e1eb75f8656fd698
             {{ encore_entry_script_tags('app') }}
         {% endblock %}
     </head>
-    <body>
+
+    <body style=\"max-width:100%;\" class=\"bg-dark\">
         {% block body %}{% endblock %}
     </body>
 </html>
-", "base.html.twig", "E:\\BTSSIO A2\\ClubAmis\\templates\\base.html.twig");
+", "base.html.twig", "C:\\wamp64\\www\\ClubDesAMIS\\templates\\base.html.twig");
     }
 }

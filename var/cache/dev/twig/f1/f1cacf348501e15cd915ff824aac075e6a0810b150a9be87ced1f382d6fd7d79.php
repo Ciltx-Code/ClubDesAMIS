@@ -131,6 +131,6 @@ class __TwigTemplate_c6022efae1ccb3b54e7fd22de1ddd547603323fcc0b1cf633f4904ebd8e
 
     <a href=\"{{ path('app_user_index') }}\">Retour à l'index</a>
 {% endblock %}
-", "user/new.html.twig", "E:\\BTSSIO A2\\ClubAmis\\templates\\user\\new.html.twig");
+", "user/new.html.twig", "C:\\wamp64\\www\\ClubDesAMIS\\templates\\user\\new.html.twig");
     }
 }

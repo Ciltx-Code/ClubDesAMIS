@@ -1,15 +1,24 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => 'v5.4.99',
-        'version' => '5.4.99.0',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => NULL,
-        'name' => 'symfony/website-skeleton',
+        'reference' => '37bf752e27345c6acc0729351c71c52078d9948b',
+        'name' => '__root__',
         'dev' => true,
     ),
     'versions' => array(
+        '__root__' => array(
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'type' => 'project',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'reference' => '37bf752e27345c6acc0729351c71c52078d9948b',
+            'dev_requirement' => false,
+        ),
         'doctrine/annotations' => array(
             'pretty_version' => '1.13.2',
             'version' => '1.13.2.0',
@@ -1244,15 +1253,6 @@
             'reference' => '909c6eea7815066a80d0a362ed41abd7924e376a',
             'dev_requirement' => true,
         ),
-        'symfony/website-skeleton' => array(
-            'pretty_version' => 'v5.4.99',
-            'version' => '5.4.99.0',
-            'type' => 'project',
-            'install_path' => __DIR__ . '/../../',
-            'aliases' => array(),
-            'reference' => NULL,
-            'dev_requirement' => false,
-        ),
         'symfony/yaml' => array(
             'pretty_version' => 'v5.4.3',
             'version' => '5.4.3.0',
@@ -1260,6 +1260,15 @@
             'install_path' => __DIR__ . '/../symfony/yaml',
             'aliases' => array(),
             'reference' => 'e80f87d2c9495966768310fc531b487ce64237a2',
+            'dev_requirement' => false,
+        ),
+        'symfonycasts/verify-email-bundle' => array(
+            'pretty_version' => 'v1.10.0',
+            'version' => '1.10.0.0',
+            'type' => 'symfony-bundle',
+            'install_path' => __DIR__ . '/../symfonycasts/verify-email-bundle',
+            'aliases' => array(),
+            'reference' => '7b9b1f59093dd260afa91eb6b3a220906a0fe0e2',
             'dev_requirement' => false,
         ),
         'theseer/tokenizer' => array(
