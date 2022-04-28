@@ -15,7 +15,11 @@
     }
 </script>
 <div class="addForm d-flex justify-content-center alignt" style="text-align: center">
-    <form name="UserForm">
+    {% if action == "ajout" %}
+    <form name="UserForm" action="{{path('app_register')}}">
+        {% else %}
+        <form name="UserForm">
+            {%endif%}
         <div id="UserForm" class="mt-3 ">
             {% if action == "ajout" %}
                 <h3 style="color: white">Ajout d'un utilisateur</h3>
