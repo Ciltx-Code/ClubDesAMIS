@@ -136,36 +136,53 @@ class __TwigTemplate_64d1cc4027007bebcd672b9cfab2a6bc320f6d96d9545c4bd7cbed86167
             // line 29
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "villeAdresse", [], "any", false, false, false, 29), "html", null, true);
             echo "</td>
-                <td>
-                    <a href=\"";
-            // line 31
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_show", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 31)]), "html", null, true);
-            echo "\">show</a>
-                    <a href=\"";
-            // line 32
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 32)]), "html", null, true);
-            echo "\">edit</a>
+                <td style=\";width: 28%;\">
+                    <div style=\"display: inline-flex\">
+                        <button style=\"margin-right:20px\" type=\"button\" class=\"btn btn-success\"
+                                onclick=\"location.href='";
+            // line 33
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_show", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 33)]), "html", null, true);
+            echo "'\">Détails
+                        </button>
+                        <button style=\"margin-right:20px\" type=\"button\" class=\"btn btn-warning\"
+                                onclick=\"location.href='";
+            // line 36
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 36)]), "html", null, true);
+            echo "'\">Modifier
+                        </button>
+                        <form method=\"post\" action=\"";
+            // line 38
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_delete", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 38)]), "html", null, true);
+            echo "\"
+                              onsubmit=\"return confirm('Etes vous sur de vouloir supprimer cet élément ?');\">
+                            <input type=\"hidden\" name=\"_token\" value=\"";
+            // line 40
+            echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("delete" . twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 40))), "html", null, true);
+            echo "\">
+                            <input type=\"submit\" style=\"margin-right:20px\" class=\"btn btn-danger\" value=\"Supprimer\"/>
+                        </form>
+                    </div>
                 </td>
             </tr>
         ";
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 36
+            // line 47
             echo "            <tr>
-                <td colspan=\"11\">no records found</td>
+                <td colspan=\"11\">Aucun amis encore enregistrés.</td>
             </tr>
         ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['user'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 40
+        // line 51
         echo "        </tbody>
     </table>
 
     <a href=\"";
-        // line 43
+        // line 54
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_new");
         echo "\">Créer un ami</a>
 ";
@@ -189,7 +206,7 @@ class __TwigTemplate_64d1cc4027007bebcd672b9cfab2a6bc320f6d96d9545c4bd7cbed86167
 
     public function getDebugInfo()
     {
-        return array (  169 => 43,  164 => 40,  155 => 36,  146 => 32,  142 => 31,  137 => 29,  133 => 28,  129 => 27,  125 => 26,  121 => 25,  117 => 24,  113 => 23,  110 => 22,  105 => 21,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  186 => 54,  181 => 51,  172 => 47,  160 => 40,  155 => 38,  150 => 36,  144 => 33,  137 => 29,  133 => 28,  129 => 27,  125 => 26,  121 => 25,  117 => 24,  113 => 23,  110 => 22,  105 => 21,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -223,14 +240,25 @@ class __TwigTemplate_64d1cc4027007bebcd672b9cfab2a6bc320f6d96d9545c4bd7cbed86167
                 <td>{{ user.telPortable }}</td>
                 <td>{{ user.numAdresse }}</td>
                 <td>{{ user.villeAdresse }}</td>
-                <td>
-                    <a href=\"{{ path('app_user_show', {'id': user.id}) }}\">show</a>
-                    <a href=\"{{ path('app_user_edit', {'id': user.id}) }}\">edit</a>
+                <td style=\";width: 28%;\">
+                    <div style=\"display: inline-flex\">
+                        <button style=\"margin-right:20px\" type=\"button\" class=\"btn btn-success\"
+                                onclick=\"location.href='{{ path('app_user_show', {'id': user.id}) }}'\">Détails
+                        </button>
+                        <button style=\"margin-right:20px\" type=\"button\" class=\"btn btn-warning\"
+                                onclick=\"location.href='{{ path('app_user_edit', {'id': user.id}) }}'\">Modifier
+                        </button>
+                        <form method=\"post\" action=\"{{ path('app_user_delete', {'id': user.id}) }}\"
+                              onsubmit=\"return confirm('Etes vous sur de vouloir supprimer cet élément ?');\">
+                            <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ user.id) }}\">
+                            <input type=\"submit\" style=\"margin-right:20px\" class=\"btn btn-danger\" value=\"Supprimer\"/>
+                        </form>
+                    </div>
                 </td>
             </tr>
         {% else %}
             <tr>
-                <td colspan=\"11\">no records found</td>
+                <td colspan=\"11\">Aucun amis encore enregistrés.</td>
             </tr>
         {% endfor %}
         </tbody>
