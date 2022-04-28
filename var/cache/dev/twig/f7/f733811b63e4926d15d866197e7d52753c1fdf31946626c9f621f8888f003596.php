@@ -86,7 +86,7 @@ class __TwigTemplate_64d1cc4027007bebcd672b9cfab2a6bc320f6d96d9545c4bd7cbed86167
 
         // line 6
         echo "
-    <table class=\"table\">
+    <table class=\"table table-dark table-hover\">
         <thead>
             <tr>
                 <th>Nom</th>
@@ -184,7 +184,7 @@ class __TwigTemplate_64d1cc4027007bebcd672b9cfab2a6bc320f6d96d9545c4bd7cbed86167
     <a href=\"";
         // line 54
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_new");
-        echo "\">Créer un ami</a>
+        echo "\" style=\"color:  white\">Créer un ami</a>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -217,7 +217,7 @@ class __TwigTemplate_64d1cc4027007bebcd672b9cfab2a6bc320f6d96d9545c4bd7cbed86167
 
 {% block body %}
 
-    <table class=\"table\">
+    <table class=\"table table-dark table-hover\">
         <thead>
             <tr>
                 <th>Nom</th>
@@ -264,8 +264,8 @@ class __TwigTemplate_64d1cc4027007bebcd672b9cfab2a6bc320f6d96d9545c4bd7cbed86167
         </tbody>
     </table>
 
-    <a href=\"{{ path('app_user_new') }}\">Créer un ami</a>
+    <a href=\"{{ path('app_user_new') }}\" style=\"color:  white\">Créer un ami</a>
 {% endblock %}
-", "user/index.html.twig", "E:\\BTSSIO A2\\ClubAmis\\templates\\user\\index.html.twig");
+", "user/index.html.twig", "C:\\wamp64\\www\\ClubDesAMIS\\templates\\user\\index.html.twig");
     }
 }

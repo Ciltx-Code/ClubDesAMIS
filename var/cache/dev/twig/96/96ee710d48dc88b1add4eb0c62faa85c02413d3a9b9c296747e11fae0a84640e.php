@@ -42,12 +42,12 @@ class __TwigTemplate_6c50d5389cbf2e47ec8691e3dcd296d63c88b51db22d4f6dadb4b00c579
         // line 1
         echo "<form method=\"post\" action=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_delete", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 1, $this->source); })()), "id", [], "any", false, false, false, 1)]), "html", null, true);
-        echo "\" onsubmit=\"return confirm('Are you sure you want to delete this item?');\">
+        echo "\" onsubmit=\"return confirm('Etes vous sur de vouloir supprimer cet utilisateur ?');\">
     <input type=\"hidden\" name=\"_token\" value=\"";
         // line 2
         echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("delete" . twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 2, $this->source); })()), "id", [], "any", false, false, false, 2))), "html", null, true);
         echo "\">
-    <button class=\"btn\">Delete</button>
+    <button class=\"btn btn-danger\">Delete</button>
 </form>
 ";
         
@@ -75,9 +75,9 @@ class __TwigTemplate_6c50d5389cbf2e47ec8691e3dcd296d63c88b51db22d4f6dadb4b00c579
 
     public function getSourceContext()
     {
-        return new Source("<form method=\"post\" action=\"{{ path('app_user_delete', {'id': user.id}) }}\" onsubmit=\"return confirm('Are you sure you want to delete this item?');\">
+        return new Source("<form method=\"post\" action=\"{{ path('app_user_delete', {'id': user.id}) }}\" onsubmit=\"return confirm('Etes vous sur de vouloir supprimer cet utilisateur ?');\">
     <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ user.id) }}\">
-    <button class=\"btn\">Delete</button>
+    <button class=\"btn btn-danger\">Delete</button>
 </form>
 ", "user/_delete_form.html.twig", "C:\\wamp64\\www\\ClubDesAMIS\\templates\\user\\_delete_form.html.twig");
     }
