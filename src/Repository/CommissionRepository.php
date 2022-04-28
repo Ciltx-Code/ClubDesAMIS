@@ -2,7 +2,7 @@
 
 namespace App\Repository;
 
-use App\Entity\commission;
+use App\Entity\Commission;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\ORM\OptimisticLockException;
 use Doctrine\ORM\ORMException;
