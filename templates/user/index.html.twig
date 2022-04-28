@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}User index{% endblock %}
+
+{% block body %}
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Email</th>
+                <th>TelFixe</th>
+                <th>TelPortable</th>
+                <th>NumAdresse</th>
+                <th>VilleAdresse</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for user in users %}
+            <tr>
+                <td>{{ user.nom }}</td>
+                <td>{{ user.prenom }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.telFixe }}</td>
+                <td>{{ user.telPortable }}</td>
+                <td>{{ user.numAdresse }}</td>
+                <td>{{ user.villeAdresse }}</td>
+                <td style=";width: 28%;">
+                    <div style="display: inline-flex">
+                        <button style="margin-right:20px" type="button" class="btn btn-success"
+                                onclick="location.href='{{ path('app_user_show', {'id': user.id}) }}'">Détails
+                        </button>
+                        <button style="margin-right:20px" type="button" class="btn btn-warning"
+                                onclick="location.href='{{ path('app_user_edit', {'id': user.id}) }}'">Modifier
+                        </button>
+                        <form method="post" action="{{ path('app_user_delete', {'id': user.id}) }}"
+                              onsubmit="return confirm('Etes vous sur de vouloir supprimer cet élément ?');">
+                            <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ user.id) }}">
+                            <input type="submit" style="margin-right:20px" class="btn btn-danger" value="Supprimer"/>
+                        </form>
+                    </div>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="11">Aucun amis encore enregistrés.</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_user_new') }}">Créer un ami</a>
+{% endblock %}

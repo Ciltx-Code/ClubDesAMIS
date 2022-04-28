@@ -1,0 +1,111 @@
+{{ form_start(form) }}
+<script>
+    function resetPlaceholderPassword(){
+        let str = document.getElementById("user_password").value;
+        if(str === ""){
+            document.getElementById("user_password").value ="*********";
+        }
+    }
+
+    function removePlaceholderPassword(){
+        let str = document.getElementById("user_password").value;
+        if(str === "*********"){
+            document.getElementById("user_password").value ="";
+        }
+    }
+</script>
+<div class="addForm">
+    <form name="UserForm">
+        <div id="UserForm" class="mt-3">
+            {% if action == "ajout" %}
+                <h3>Ajout d'un utilisateur</h3>
+            {% else %}
+                <h3>Modification d'un utilisateur</h3>
+            {% endif %}
+            <div>
+                <label class="required field field_v2 mt-3">
+                    <span class="field__label-wrap">
+                        <span class="field__label">Email</span>
+                    </span>
+                    {{ form_widget(form.email, {'attr': {'class': 'field__input', 'autocomplete' : 'off'} } ) }}
+                </label>
+            </div>
+            <div>
+                <label class="field field_v2 mt-3" >
+                    <span class="field__label-wrap">
+                        <span class="field__label">Mot de passe</span>
+                    </span>
+                    {{ form_widget(form.password, {'attr': { 'type' : 'password' , 'name' : 'userPassword', 'id' : 'userPassword' , 'class': 'field__input','autocomplete' : 'off', 'onfocusin' : 'removePlaceholderPassword()', 'onfocusout' : 'resetPlaceholderPassword()',  'value' : '*********'   } } ) }}
+                </label>
+            </div>
+            <div>
+                <label class="required field field_v2 mt-3" >
+                    <span class="field__label-wrap">
+                        <span class="field__label">Nom</span>
+                    </span>
+                    {{ form_widget(form.nom, {'attr': {'class': 'field__input', 'autocomplete' : 'off'} } ) }}
+
+                </label>
+            </div>
+            <div>
+                <label class="required field field_v2 mt-3">
+                    <span class="field__label-wrap">
+                        <span class="field__label">Prénom</span>
+                    </span>
+                    {{ form_widget(form.prenom, {'attr': {'class': 'field__input', 'autocomplete' : 'off'} } ) }}
+
+                </label>
+            </div>
+            <div>
+                <label class="required field field_v2 mt-3" >
+                    <span class="field__label-wrap">
+                        <span class="field__label">Téléphone fixe</span>
+                    </span>
+                    {{ form_widget(form.telFixe, {'attr': {'class': 'field__input',  'maxlength' : '10', 'minlength' : '10','autocomplete' : 'off'} } ) }}
+
+                </label>
+            </div>
+            <div>
+                <label class="required field field_v2 mt-3" >
+                    <span class="field__label-wrap">
+                        <span class="field__label">Téléphone portable</span>
+                    </span>
+                    {{ form_widget(form.telPortable, {'attr': {'class': 'field__input',  'maxlength' : '10', 'minlength' : '10','autocomplete' : 'off'} } ) }}
+
+                </label>
+            </div>
+            <div>
+                <label class="required field field_v2 mt-3">
+                    <span class="field__label-wrap">
+                        <span class="field__label">Num Adresse</span>
+                    </span>
+                    {{ form_widget(form.numAdresse, {'attr': {'class': 'field__input','autocomplete' : 'off'} } ) }}
+
+                </label>
+            </div>
+            <div>
+                <label class="required field field_v2 mt-3">
+                    <span class="field__label-wrap">
+                        <span class="field__label">Num Adresse</span>
+                    </span>
+                    {{ form_widget(form.villeAdresse, {'attr': {'class': 'field__input','autocomplete' : 'off'} } ) }}
+
+                </label>
+            </div>
+            <div class="mt-3">
+                <label>
+                    Rôles :
+                    <select>
+                            <option value="user">Utilisateur</option>
+                            <option value="admin">Administrateur</option>
+                    </select>
+                </label>
+            </div>
+        </div>
+        {{ form_row(form._token) }}
+        <div class="mb-3 mx-3 mt-3">
+            <button class="btn mx-3 btn-outline-dark">{{ button_label|default('Enregistrer') }}</button>
+        </div>
+    </form>
+</div>
+{{ form_end(form) }}
