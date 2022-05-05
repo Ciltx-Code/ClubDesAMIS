@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '37bf752e27345c6acc0729351c71c52078d9948b',
+        'reference' => '6ff7e05173d66e5bb331771388917abe34ad4e11',
         'name' => '__root__',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '37bf752e27345c6acc0729351c71c52078d9948b',
+            'reference' => '6ff7e05173d66e5bb331771388917abe34ad4e11',
             'dev_requirement' => false,
         ),
         'doctrine/annotations' => array(
@@ -170,6 +170,15 @@
             'install_path' => __DIR__ . '/../egulias/email-validator',
             'aliases' => array(),
             'reference' => 'ee0db30118f661fb166bcffbf5d82032df484697',
+            'dev_requirement' => false,
+        ),
+        'fpdf/fpdf' => array(
+            'pretty_version' => '1.84.0',
+            'version' => '1.84.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../fpdf/fpdf',
+            'aliases' => array(),
+            'reference' => '4d6fe08d3d200ccdb259dba84cfb363ed68230bc',
             'dev_requirement' => false,
         ),
         'friendsofphp/proxy-manager-lts' => array(

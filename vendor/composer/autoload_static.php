@@ -134,6 +134,10 @@ class ComposerStaticInit225d713121716ea2015109030734e6d6
         array (
             'Laminas\\Code\\' => 13,
         ),
+        'F' => 
+        array (
+            'Fpdf\\' => 5,
+        ),
         'E' => 
         array (
             'Egulias\\EmailValidator\\' => 23,
@@ -511,6 +515,10 @@ class ComposerStaticInit225d713121716ea2015109030734e6d6
         array (
             0 => __DIR__ . '/..' . '/laminas/laminas-code/src',
         ),
+        'Fpdf\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fpdf/fpdf/src/Fpdf',
+        ),
         'Egulias\\EmailValidator\\' => 
         array (
             0 => __DIR__ . '/..' . '/egulias/email-validator/src',
@@ -591,7 +599,10 @@ class ComposerStaticInit225d713121716ea2015109030734e6d6
     );
 
     public static $classMap = array (
+        'App\\Controller\\LoginController' => __DIR__ . '/../..' . '/src/Controller/LoginController.php',
         'App\\Controller\\PdfCreatorController' => __DIR__ . '/../..' . '/src/Controller/PdfCreatorController.php',
+        'App\\Controller\\RegistrationController' => __DIR__ . '/../..' . '/src/Controller/RegistrationController.php',
+        'App\\Controller\\SecurityController' => __DIR__ . '/../..' . '/src/Controller/SecurityController.php',
         'App\\Controller\\UserController' => __DIR__ . '/../..' . '/src/Controller/UserController.php',
         'App\\Entity\\Action' => __DIR__ . '/../..' . '/src/Entity/Action.php',
         'App\\Entity\\Commission' => __DIR__ . '/../..' . '/src/Entity/Commission.php',
@@ -601,6 +612,7 @@ class ComposerStaticInit225d713121716ea2015109030734e6d6
         'App\\Entity\\Inscrit' => __DIR__ . '/../..' . '/src/Entity/Inscrit.php',
         'App\\Entity\\Parraine' => __DIR__ . '/../..' . '/src/Entity/Parraine.php',
         'App\\Entity\\User' => __DIR__ . '/../..' . '/src/Entity/User.php',
+        'App\\Form\\RegistrationFormType' => __DIR__ . '/../..' . '/src/Form/RegistrationFormType.php',
         'App\\Form\\UserType' => __DIR__ . '/../..' . '/src/Form/UserType.php',
         'App\\Kernel' => __DIR__ . '/../..' . '/src/Kernel.php',
         'App\\Repository\\ActionRepository' => __DIR__ . '/../..' . '/src/Repository/ActionRepository.php',
@@ -1829,6 +1841,7 @@ class ComposerStaticInit225d713121716ea2015109030734e6d6
         'Egulias\\EmailValidator\\Warning\\QuotedString' => __DIR__ . '/..' . '/egulias/email-validator/src/Warning/QuotedString.php',
         'Egulias\\EmailValidator\\Warning\\TLD' => __DIR__ . '/..' . '/egulias/email-validator/src/Warning/TLD.php',
         'Egulias\\EmailValidator\\Warning\\Warning' => __DIR__ . '/..' . '/egulias/email-validator/src/Warning/Warning.php',
+        'Fpdf\\Fpdf' => __DIR__ . '/..' . '/fpdf/fpdf/src/Fpdf/Fpdf.php',
         'IntlDateFormatter' => __DIR__ . '/..' . '/symfony/polyfill-intl-icu/Resources/stubs/IntlDateFormatter.php',
         'JsonException' => __DIR__ . '/..' . '/symfony/polyfill-php73/Resources/stubs/JsonException.php',
         'Laminas\\Code\\DeclareStatement' => __DIR__ . '/..' . '/laminas/laminas-code/src/DeclareStatement.php',

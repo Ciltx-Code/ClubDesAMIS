@@ -4,9 +4,11 @@ namespace App\Controller;
 
 use App\Entity\User;
 use Doctrine\ORM\EntityManager;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Fpdf\Fpdf;
 
 
 class PdfCreatorController extends AbstractController
@@ -14,25 +16,28 @@ class PdfCreatorController extends AbstractController
     /**
      * @Route("/pdf/creator", name="app_pdf_creator")
      */
-    public function index(EntityManager $entityManager): Response
+    public function index(EntityManagerInterface $entityManager): Response
     {
-        require('./public/fPdf/fpdf.php');
+
         $amis = $entityManager
             ->getRepository(User::class)
             ->findAll();
-
-        $pdf = new FPDF();
-        $pdf->AddPage();
-        $pdf->SetFont('Arial','B',16);
+        $fpdf = new Fpdf();
+        $fpdf->AddPage();
+        $fpdf->SetFont('Arial','B',16);
         foreach ($amis as $ami){
-            $pdf->Cell(40,10,$ami->getNom(),1,2,'C');
-            $pdf->Ln();
+            $fpdf->Cell(40,10,$ami->getNom(),1,2,'C');
+            $fpdf->Ln();
         }
+        $fpdf->Output('D');
 
-        $pdf->Output();
+        $response = $this->render("pdf_creator/index.html.twig",
+            array(
+                'pdf'=>$fpdf,
+                'controller_name'=>'mkengiuh'
+            ));
 
-        return $this->render('pdf_creator/index.html.twig', [
-            'controller_name' => 'PdfCreatorController',
-        ]);
+        $response->headers->set('Content-type', 'application/pdf');
+        return $response;
     }
 }

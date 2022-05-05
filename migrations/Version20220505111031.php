@@ -10,7 +10,7 @@ use Doctrine\Migrations\AbstractMigration;
 /**
  * Auto-generated Migration: Please modify to your needs!
  */
-final class Version20220428132824 extends AbstractMigration
+final class Version20220505111031 extends AbstractMigration
 {
     public function getDescription(): string
     {
@@ -32,6 +32,8 @@ final class Version20220428132824 extends AbstractMigration
         $this->addSql('CREATE TABLE inscrit (id INT AUTO_INCREMENT NOT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB');
         $this->addSql('CREATE TABLE inscrit_user (inscrit_id INT NOT NULL, user_id INT NOT NULL, INDEX IDX_C2602F716DCD4FEE (inscrit_id), INDEX IDX_C2602F71A76ED395 (user_id), PRIMARY KEY(inscrit_id, user_id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB');
         $this->addSql('CREATE TABLE inscrit_action (inscrit_id INT NOT NULL, action_id INT NOT NULL, INDEX IDX_943235226DCD4FEE (inscrit_id), INDEX IDX_943235229D32F035 (action_id), PRIMARY KEY(inscrit_id, action_id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB');
+        $this->addSql('CREATE TABLE parraine (id INT AUTO_INCREMENT NOT NULL, amis_parraine_id INT DEFAULT NULL, INDEX IDX_2371A5FAEF1F4E0D (amis_parraine_id), PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB');
+        $this->addSql('CREATE TABLE parraine_user (parraine_id INT NOT NULL, user_id INT NOT NULL, INDEX IDX_431D729F2A603A13 (parraine_id), INDEX IDX_431D729FA76ED395 (user_id), PRIMARY KEY(parraine_id, user_id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB');
         $this->addSql('CREATE TABLE user (id INT AUTO_INCREMENT NOT NULL, email VARCHAR(180) NOT NULL, roles JSON NOT NULL, password VARCHAR(255) NOT NULL, nom VARCHAR(255) NOT NULL, prenom VARCHAR(255) NOT NULL, telFixe VARCHAR(10) NOT NULL, telPortable VARCHAR(10) NOT NULL, numeroAdresse INT NOT NULL, villeAdresse VARCHAR(255) NOT NULL, UNIQUE INDEX UNIQ_8D93D649E7927C74 (email), PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB');
         $this->addSql('ALTER TABLE action ADD CONSTRAINT FK_47CC8C9231058CC4 FOREIGN KEY (commission_id_id) REFERENCES commission (id)');
         $this->addSql('ALTER TABLE action_user ADD CONSTRAINT FK_FB726D479D32F035 FOREIGN KEY (action_id) REFERENCES action (id) ON DELETE CASCADE');
@@ -46,6 +48,9 @@ final class Version20220428132824 extends AbstractMigration
         $this->addSql('ALTER TABLE inscrit_user ADD CONSTRAINT FK_C2602F71A76ED395 FOREIGN KEY (user_id) REFERENCES user (id) ON DELETE CASCADE');
         $this->addSql('ALTER TABLE inscrit_action ADD CONSTRAINT FK_943235226DCD4FEE FOREIGN KEY (inscrit_id) REFERENCES inscrit (id) ON DELETE CASCADE');
         $this->addSql('ALTER TABLE inscrit_action ADD CONSTRAINT FK_943235229D32F035 FOREIGN KEY (action_id) REFERENCES action (id) ON DELETE CASCADE');
+        $this->addSql('ALTER TABLE parraine ADD CONSTRAINT FK_2371A5FAEF1F4E0D FOREIGN KEY (amis_parraine_id) REFERENCES user (id)');
+        $this->addSql('ALTER TABLE parraine_user ADD CONSTRAINT FK_431D729F2A603A13 FOREIGN KEY (parraine_id) REFERENCES parraine (id) ON DELETE CASCADE');
+        $this->addSql('ALTER TABLE parraine_user ADD CONSTRAINT FK_431D729FA76ED395 FOREIGN KEY (user_id) REFERENCES user (id) ON DELETE CASCADE');
     }
 
     public function down(Schema $schema): void
@@ -60,10 +65,13 @@ final class Version20220428132824 extends AbstractMigration
         $this->addSql('ALTER TABLE fonction_user DROP FOREIGN KEY FK_F8A9981557889920');
         $this->addSql('ALTER TABLE inscrit_user DROP FOREIGN KEY FK_C2602F716DCD4FEE');
         $this->addSql('ALTER TABLE inscrit_action DROP FOREIGN KEY FK_943235226DCD4FEE');
+        $this->addSql('ALTER TABLE parraine_user DROP FOREIGN KEY FK_431D729F2A603A13');
         $this->addSql('ALTER TABLE action_user DROP FOREIGN KEY FK_FB726D47A76ED395');
         $this->addSql('ALTER TABLE dine_user DROP FOREIGN KEY FK_BD068788A76ED395');
         $this->addSql('ALTER TABLE fonction_user DROP FOREIGN KEY FK_F8A99815A76ED395');
         $this->addSql('ALTER TABLE inscrit_user DROP FOREIGN KEY FK_C2602F71A76ED395');
+        $this->addSql('ALTER TABLE parraine DROP FOREIGN KEY FK_2371A5FAEF1F4E0D');
+        $this->addSql('ALTER TABLE parraine_user DROP FOREIGN KEY FK_431D729FA76ED395');
         $this->addSql('DROP TABLE action');
         $this->addSql('DROP TABLE action_user');
         $this->addSql('DROP TABLE commission');
@@ -76,6 +84,8 @@ final class Version20220428132824 extends AbstractMigration
         $this->addSql('DROP TABLE inscrit');
         $this->addSql('DROP TABLE inscrit_user');
         $this->addSql('DROP TABLE inscrit_action');
+        $this->addSql('DROP TABLE parraine');
+        $this->addSql('DROP TABLE parraine_user');
         $this->addSql('DROP TABLE user');
     }
 }

@@ -6,7 +6,10 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Controller\\LoginController' => $baseDir . '/src/Controller/LoginController.php',
     'App\\Controller\\PdfCreatorController' => $baseDir . '/src/Controller/PdfCreatorController.php',
+    'App\\Controller\\RegistrationController' => $baseDir . '/src/Controller/RegistrationController.php',
+    'App\\Controller\\SecurityController' => $baseDir . '/src/Controller/SecurityController.php',
     'App\\Controller\\UserController' => $baseDir . '/src/Controller/UserController.php',
     'App\\Entity\\Action' => $baseDir . '/src/Entity/Action.php',
     'App\\Entity\\Commission' => $baseDir . '/src/Entity/Commission.php',
@@ -16,6 +19,7 @@ return array(
     'App\\Entity\\Inscrit' => $baseDir . '/src/Entity/Inscrit.php',
     'App\\Entity\\Parraine' => $baseDir . '/src/Entity/Parraine.php',
     'App\\Entity\\User' => $baseDir . '/src/Entity/User.php',
+    'App\\Form\\RegistrationFormType' => $baseDir . '/src/Form/RegistrationFormType.php',
     'App\\Form\\UserType' => $baseDir . '/src/Form/UserType.php',
     'App\\Kernel' => $baseDir . '/src/Kernel.php',
     'App\\Repository\\ActionRepository' => $baseDir . '/src/Repository/ActionRepository.php',
@@ -1244,6 +1248,7 @@ return array(
     'Egulias\\EmailValidator\\Warning\\QuotedString' => $vendorDir . '/egulias/email-validator/src/Warning/QuotedString.php',
     'Egulias\\EmailValidator\\Warning\\TLD' => $vendorDir . '/egulias/email-validator/src/Warning/TLD.php',
     'Egulias\\EmailValidator\\Warning\\Warning' => $vendorDir . '/egulias/email-validator/src/Warning/Warning.php',
+    'Fpdf\\Fpdf' => $vendorDir . '/fpdf/fpdf/src/Fpdf/Fpdf.php',
     'IntlDateFormatter' => $vendorDir . '/symfony/polyfill-intl-icu/Resources/stubs/IntlDateFormatter.php',
     'JsonException' => $vendorDir . '/symfony/polyfill-php73/Resources/stubs/JsonException.php',
     'Laminas\\Code\\DeclareStatement' => $vendorDir . '/laminas/laminas-code/src/DeclareStatement.php',
