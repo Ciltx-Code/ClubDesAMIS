@@ -26,8 +26,23 @@ class UserController extends AbstractController
         $users = $userRepository->findAll();
         $userNames = array();
         foreach ($users as $user){
-            $userNames[]=$user->nom ." - ". $user->prenom;
+            $userNames[]=$user->nom;
         }
+        $request = Request::createFromGlobals();
+
+        $name = $request->get('nom');
+        if(isset($name)){
+            $numUser = null;
+            foreach ($users as $user){
+                if($user->nom==$name){
+                    $numUser = $user->getId();
+                }
+            }
+            if(isset($numUser)){
+                return $this->redirect("/user/".$numUser);
+            }
+        }
+
 //        foreach ($userNames as $name){
 //            echo $name;
 //        }

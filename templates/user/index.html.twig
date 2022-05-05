@@ -5,18 +5,21 @@
 {% block body %}
 
     <script>
-        var userNames = [];
-        {%for username in userNames%}
-        userNames.push("{{ username }}");
-        {%endfor%}
-
-        $("#tags").autocomplete({source: userNames});
+        $( function() {
+            var availableTags = [];
+            {%for username in userNames%}
+                availableTags.push("{{ username }}");
+            {%endfor%}
+            $( "#tags" ).autocomplete({
+                source: availableTags
+            });
+        } );
 
     </script>
 
     <div class="d-flex justify-content-center mb-5">
         <form action="{{ path('app_user_index') }}" class="d-flex w-75 mt-5 " method="post">
-            <input type="text" class="form-control me-sm-2" name="num" id="tags"
+            <input type="text" class="form-control me-sm-2" name="nom" id="tags"
                    placeholder="Rechercher (Nom)" autocomplete="off">
             <input type="submit" value="Rechercher" class="btn btn-secondary my-2 my-sm-0"/>
         </form>
