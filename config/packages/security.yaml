@@ -18,6 +18,9 @@ security:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
         main:
+            logout:
+                path: app_logout
+
             form_login:
                 # "login" is the name of the route created previously
                 login_path: login
